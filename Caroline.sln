@@ -1,0 +1,103 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{14D9802C-4A70-4A28-BBE0-E3408424E8E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FC9799D0-8E64-433F-B7FC-E69A1F6F3E81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4F380B41-C112-4AC7-B91B-3F4CD814072E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C9E71FE1-CE8A-4CB1-B776-6CD32D9AB299}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{400D8780-A9A5-453C-AF7F-53AC98A5068C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{876EF737-A32E-47B1-8E3B-FDA41C667C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caroline.Application", "src\Core\Caroline.Application\Caroline.Application.csproj", "{8243C8BF-707E-4919-B812-B4EAE5FF5386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caroline.Domain", "src\Core\Caroline.Domain\Caroline.Domain.csproj", "{18E39314-5010-4EAE-94E2-16F68C11BC10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caroline.Infrastructure", "src\Infrastructure\Caroline.Infrastructure\Caroline.Infrastructure.csproj", "{E105F593-B3C9-49C0-8D4D-DDCBF1C90095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caroline.Shared", "src\Shared\Caroline.Shared\Caroline.Shared.csproj", "{D372B554-08ED-498B-8EC6-9E981AD7440B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{CC115ECA-C232-49CB-9EDB-55A6965CC48A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0D7B1305-A5F0-4478-87F7-B435484D860B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caroline.API", "src\Web\Server\Caroline.API\Caroline.API.csproj", "{A94F62BF-DC15-4758-BD71-E44FABCE07E1}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "caroline.vue", "src\Web\Client\caroline.vue\", "{870AF421-043D-4A1B-8AA3-33A5B4AAA7A1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61406"
+		Debug.AspNetCompiler.PhysicalPath = "src\Web\Client\caroline.vue\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61406\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61406"
+		Release.AspNetCompiler.PhysicalPath = "src\Web\Client\caroline.vue\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61406\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61406"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8243C8BF-707E-4919-B812-B4EAE5FF5386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8243C8BF-707E-4919-B812-B4EAE5FF5386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8243C8BF-707E-4919-B812-B4EAE5FF5386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8243C8BF-707E-4919-B812-B4EAE5FF5386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E39314-5010-4EAE-94E2-16F68C11BC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E39314-5010-4EAE-94E2-16F68C11BC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E39314-5010-4EAE-94E2-16F68C11BC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E39314-5010-4EAE-94E2-16F68C11BC10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E105F593-B3C9-49C0-8D4D-DDCBF1C90095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E105F593-B3C9-49C0-8D4D-DDCBF1C90095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E105F593-B3C9-49C0-8D4D-DDCBF1C90095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E105F593-B3C9-49C0-8D4D-DDCBF1C90095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D372B554-08ED-498B-8EC6-9E981AD7440B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D372B554-08ED-498B-8EC6-9E981AD7440B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D372B554-08ED-498B-8EC6-9E981AD7440B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D372B554-08ED-498B-8EC6-9E981AD7440B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A94F62BF-DC15-4758-BD71-E44FABCE07E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94F62BF-DC15-4758-BD71-E44FABCE07E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94F62BF-DC15-4758-BD71-E44FABCE07E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94F62BF-DC15-4758-BD71-E44FABCE07E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870AF421-043D-4A1B-8AA3-33A5B4AAA7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870AF421-043D-4A1B-8AA3-33A5B4AAA7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870AF421-043D-4A1B-8AA3-33A5B4AAA7A1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{870AF421-043D-4A1B-8AA3-33A5B4AAA7A1}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F380B41-C112-4AC7-B91B-3F4CD814072E} = {14D9802C-4A70-4A28-BBE0-E3408424E8E8}
+		{C9E71FE1-CE8A-4CB1-B776-6CD32D9AB299} = {14D9802C-4A70-4A28-BBE0-E3408424E8E8}
+		{400D8780-A9A5-453C-AF7F-53AC98A5068C} = {14D9802C-4A70-4A28-BBE0-E3408424E8E8}
+		{876EF737-A32E-47B1-8E3B-FDA41C667C55} = {14D9802C-4A70-4A28-BBE0-E3408424E8E8}
+		{8243C8BF-707E-4919-B812-B4EAE5FF5386} = {4F380B41-C112-4AC7-B91B-3F4CD814072E}
+		{18E39314-5010-4EAE-94E2-16F68C11BC10} = {4F380B41-C112-4AC7-B91B-3F4CD814072E}
+		{E105F593-B3C9-49C0-8D4D-DDCBF1C90095} = {C9E71FE1-CE8A-4CB1-B776-6CD32D9AB299}
+		{D372B554-08ED-498B-8EC6-9E981AD7440B} = {400D8780-A9A5-453C-AF7F-53AC98A5068C}
+		{CC115ECA-C232-49CB-9EDB-55A6965CC48A} = {876EF737-A32E-47B1-8E3B-FDA41C667C55}
+		{0D7B1305-A5F0-4478-87F7-B435484D860B} = {876EF737-A32E-47B1-8E3B-FDA41C667C55}
+		{A94F62BF-DC15-4758-BD71-E44FABCE07E1} = {0D7B1305-A5F0-4478-87F7-B435484D860B}
+		{870AF421-043D-4A1B-8AA3-33A5B4AAA7A1} = {CC115ECA-C232-49CB-9EDB-55A6965CC48A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBF9FE04-3150-4350-B6AC-3A6D28BAFBDB}
+	EndGlobalSection
+EndGlobal
