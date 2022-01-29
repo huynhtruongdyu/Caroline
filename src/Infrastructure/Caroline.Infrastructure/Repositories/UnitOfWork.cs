@@ -7,7 +7,7 @@ namespace Caroline.Infrastructure.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
         private bool _disposed = false;
 
         private IPostRepository _postRepository;

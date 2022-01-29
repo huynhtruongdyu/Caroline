@@ -1,4 +1,5 @@
 using Caroline.Application.Interfaces.Repositories;
+using Caroline.Application.Profiles;
 using Caroline.Infrastructure.Contexts;
 using Caroline.Infrastructure.Repositories;
 using MediatR;
@@ -10,7 +11,7 @@ var configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddMediatR(typeof(AppDbContext).Assembly);
 builder.Services.AddDbContext<AppDbContext>(o => o.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -19,6 +20,9 @@ builder.Services.AddSwaggerGen();
 
 //Health Check
 builder.Services.AddHealthChecks();
+
+//Auto Mapper
+builder.Services.AddAutoMapper(typeof(CoreProfile).Assembly);
 
 var app = builder.Build();
 

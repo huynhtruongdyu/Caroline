@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Caroline.Application\Caroline.Application.csproj" />
     <ProjectReference Include="..\..\Core\Caroline.Domain\Caroline.Domain.csproj" />
+    <ProjectReference Include="..\..\Shared\Caroline.Shared\Caroline.Shared.csproj" />
   </ItemGroup>
 
 </Project>

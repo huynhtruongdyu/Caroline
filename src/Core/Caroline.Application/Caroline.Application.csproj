@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Caroline.Shared\Caroline.Shared.csproj" />
     <ProjectReference Include="..\Caroline.Domain\Caroline.Domain.csproj" />
   </ItemGroup>
 

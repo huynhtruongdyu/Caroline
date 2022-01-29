@@ -1,5 +1,6 @@
-﻿using Caroline.Application.Interfaces.Repositories;
-using Caroline.Infrastructure.Models.Post;
+﻿using AutoMapper;
+using Caroline.Application.Interfaces.Repositories;
+using Caroline.Shared.Models.Post;
 using MediatR;
 
 namespace Caroline.Infrastructure.Features.Queries.Post
@@ -7,16 +8,18 @@ namespace Caroline.Infrastructure.Features.Queries.Post
     public class GetAllPostHandler : IRequestHandler<GetAllPostQuery, List<PostModel>>
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public GetAllPostHandler(IUnitOfWork unitOfWork)
+        public GetAllPostHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public Task<List<PostModel>> Handle(GetAllPostQuery request, CancellationToken cancellationToken)
         {
             var postsFromDB = _unitOfWork.PostRepository.GetAll();
-            var postsModel = postsFromDB.Select(post => new PostModel { Id = post.Id, Title = post.Title, Content = post.Content, ThumbnailURL = post.Thumbnail, CreatedDate = post.CreatedDate, CreatedBy = post.CreatedBy }).ToList();
+            var postsModel = _mapper.Map<List<PostModel>>(postsFromDB);
             return Task.FromResult(postsModel);
         }
     }
