@@ -3,5 +3,5 @@ using MediatR;
 
 namespace Caroline.Infrastructure.Features.Queries.Post
 {
-    public class GetAllPostQuery : IRequest<List<PostModel>> { };
+    public record GetPostByIdQuery(int Id) : IRequest<PostModel>;
 }

@@ -16,8 +16,19 @@ namespace Caroline.API.Controllers
         [HttpGet("GetPosts")]
         public async Task<IActionResult> GetPosts()
         {
-            var data = await _mediator.Send(new GetAllPostQuery());
-            return Ok(data);
+            var posts = await _mediator.Send(new GetAllPostQuery());
+            if (posts == null)
+                return BadRequest("Not Found");
+            return Ok(posts);
+        }
+
+        [HttpGet("GetPostById")]
+        public async Task<IActionResult> GetPostById(int id)
+        {
+            var post = await _mediator.Send(new GetPostByIdQuery(id));
+            if (post == null)
+                return BadRequest("Not Found");
+            return Ok(post);
         }
     }
 }
