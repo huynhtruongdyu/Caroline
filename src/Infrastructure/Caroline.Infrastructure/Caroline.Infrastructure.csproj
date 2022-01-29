@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\Caroline.Application\Caroline.Application.csproj" />
     <ProjectReference Include="..\..\Core\Caroline.Domain\Caroline.Domain.csproj" />
   </ItemGroup>
 
