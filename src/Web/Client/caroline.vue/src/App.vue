@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h2>{{ greate }} {{ name }}</h2>
+  <div v-text="email"></div>
+  <div v-html="decription"></div>
+  <h2 v-bind:id="headingID">Heading 2</h2>
+  <button v-bind:disabled="isDisable">Click me!</button>
+  <h2 class="underline">This is underline text</h2>
+  <h2 v-bind:class="status">Status</h2>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: {},
+  data() {
+    return {
+      greate: "Hello",
+      name: "Duy",
+      email: "huynhtruongdyu@gmail.com",
+      decription: "<b>this is some decription</b>",
+      headingID: "heading2",
+      isDisable: true,
+      status:"danger"
+    };
+  },
+};
 </script>
 
 <style>
@@ -22,5 +34,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.underline{
+  text-decoration: underline;
 }
 </style>

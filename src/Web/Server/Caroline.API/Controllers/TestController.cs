@@ -30,5 +30,8 @@ namespace Caroline.API.Controllers
                 return BadRequest("Not Found");
             return Ok(post);
         }
+
+        [HttpGet("/error")]
+        public IActionResult HandleError() => Problem();
     }
 }
