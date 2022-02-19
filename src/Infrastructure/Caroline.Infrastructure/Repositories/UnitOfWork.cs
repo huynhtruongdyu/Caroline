@@ -35,6 +35,16 @@ namespace Caroline.Infrastructure.Repositories
             GC.SuppressFinalize(this);
         }
 
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
         public IPostRepository PostRepository
         {
             get

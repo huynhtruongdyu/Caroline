@@ -30,7 +30,7 @@ namespace Caroline.Infrastructure.Repositories
         public IEnumerable<TEntity> GetAll(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
-            string includeProperties = "")
+            string includeProperties = null)
         {
             IQueryable<TEntity> query = _dbSet;
 
@@ -67,7 +67,7 @@ namespace Caroline.Infrastructure.Repositories
 
         public void Save()
         {
-            _context.SaveChanges();
+            throw new NotImplementedException();
         }
 
         public void Update(TEntity entity)

@@ -1,4 +1,6 @@
-﻿using Caroline.Infrastructure.Features.Queries.Post;
+﻿using Caroline.Infrastructure.Features.Commands.Posts;
+using Caroline.Infrastructure.Features.Queries.Posts;
+using Caroline.Shared.Models.Post;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,11 +8,8 @@ namespace Caroline.API.Controllers
 {
     public class TestController : BaseController
     {
-        private readonly IMediator _mediator;
-
-        public TestController(IMediator mediator)
+        public TestController(IMediator mediator) : base(mediator)
         {
-            _mediator = mediator;
         }
 
         [HttpGet("GetPosts")]
@@ -29,6 +28,17 @@ namespace Caroline.API.Controllers
             if (post == null)
                 return BadRequest("Not Found");
             return Ok(post);
+        }
+
+        [HttpPost("CreatePost")]
+        public async Task<IActionResult> CreatePost(PostCreateModel model)
+        {
+            var result = await _mediator.Send(new CreatePostCommand(model));
+            if (result.IsSuccess)
+            {
+                return Ok("created");
+            }
+            return BadRequest(result.Message);
         }
 
         [HttpGet("/error")]

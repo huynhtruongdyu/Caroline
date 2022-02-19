@@ -14,6 +14,7 @@ namespace Caroline.Application.Profiles
         public PostProfile()
         {
             CreateMap<Post, PostModel>().ReverseMap();
+            CreateMap<Post, PostCreateModel>().ReverseMap();
         }
     }
 }

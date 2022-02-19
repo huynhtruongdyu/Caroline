@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Caroline.API.Controllers
@@ -7,5 +7,11 @@ namespace Caroline.API.Controllers
     [ApiController]
     public class BaseController : ControllerBase
     {
+        protected readonly IMediator _mediator;
+
+        public BaseController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
     }
 }
