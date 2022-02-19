@@ -1,7 +1,7 @@
 ﻿using Caroline.Application.Interfaces.Repositories;
-using Caroline.Application.Interfaces.Repositories.Categories;
+using Caroline.Application.Interfaces.Repositories.Posts;
 using Caroline.Infrastructure.Contexts;
-using Caroline.Infrastructure.Repositories.Categories;
+using Caroline.Infrastructure.Repositories.Posts;
 
 namespace Caroline.Infrastructure.Repositories
 {

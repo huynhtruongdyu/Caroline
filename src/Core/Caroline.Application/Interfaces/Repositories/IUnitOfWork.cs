@@ -1,4 +1,4 @@
-﻿using Caroline.Application.Interfaces.Repositories.Categories;
+﻿using Caroline.Application.Interfaces.Repositories.Posts;
 
 namespace Caroline.Application.Interfaces.Repositories
 {

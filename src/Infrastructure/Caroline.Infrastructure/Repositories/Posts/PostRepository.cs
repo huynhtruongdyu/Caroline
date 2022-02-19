@@ -1,8 +1,8 @@
-﻿using Caroline.Application.Interfaces.Repositories.Categories;
+﻿using Caroline.Application.Interfaces.Repositories.Posts;
 using Caroline.Domain.Categories;
 using Caroline.Infrastructure.Contexts;
 
-namespace Caroline.Infrastructure.Repositories.Categories
+namespace Caroline.Infrastructure.Repositories.Posts
 {
     public class PostRepository : GenericRepository<Post>, IPostRepository
     {
